@@ -1,0 +1,37 @@
+body {
+    height: 100vh;
+}
+table {
+    width: 100%;
+    border: 1px solid #37B7C3;
+    border-spacing: 0px;
+    /* margin: 50%; */
+    /* transform: translate(-50% ,50%); */
+}
+table td , table th  {
+    padding: 15px;
+}
+
+table th {
+    background-color: #071952;
+}
+
+table th {
+    background-color: #088395;
+    border: 1px solid #37B7C3;
+}
+table td {
+    background-color: #EBF4F6;
+    color: black;
+    text-align: center;
+    border: 1px solid #37B7C3;
+}
+
+.header_container {
+    text-align: center;
+}
+
+#nothing {
+    color: #088395;
+    
+ }
