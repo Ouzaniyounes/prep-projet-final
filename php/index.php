@@ -38,9 +38,9 @@
                     
                     $username_Entred = htmlspecialchars($_POST["Search-data"]);
                     
-                    $search_req = $db -> prepare("SELECT * FROM Utilisateur WHERE Username = :username");
+                    $search_req = $db -> prepare("SELECT * FROM Utilisateur WHERE Username LIKE :username  ");
                     $search_req -> execute([
-                        ":username" => $username_Entred
+                        ":username" => '%' . $username_Entred . '%'
                     ]);
                   
                   echo 
@@ -132,7 +132,7 @@
                             echo " <td> ". $result["prenom_user"] ."</td>";
                             echo " <td> ". $result["email_user"] ."</td>";
                             echo " <td> ". $result["Username"] ."</td>";
-                            echo " <td> ". $result["ProfileImg_user"] ."</td>";
+                            echo " <td> <img src='". $result["ProfileImg_user"] ." ' alt=''> </td>";
                             echo " <td> ". $result["Password"]."</td>";
                             echo " <td> ". showRole($result["Role"])."</td>";
                             echo " <td> <a href='changeEtatUser.php?id_user=".$result["id_user"]."'> ".showEtat($result["Etat"])." </a> </td>";
@@ -147,6 +147,7 @@
                         echo " you cant see anything ";
                     }
                     echo"<a href='deconectUser.php'> Deconnect </a>";
+                    echo"<a href='deleteFile.php'> delete the img  </a>";
 
 
 

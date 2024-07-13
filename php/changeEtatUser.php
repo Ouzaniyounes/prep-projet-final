@@ -4,7 +4,7 @@
     include("connexionDatabase.php");
 
     if (!isset($_GET['id_user'])) {
-        die("Error: : 'id' parameter is missing in the URL.");
+          die("Error: : 'id' parameter is missing in the URL.");
     }
     $id_User = htmlspecialchars($_GET['id_user']);
 
